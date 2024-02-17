@@ -45,6 +45,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/svgs");
     eleventyConfig.addPassthroughCopy("./src/assets/js");
 
+    eleventyConfig.addPassthroughCopy("./src/about");
+    eleventyConfig.addPassthroughCopy("./src/services");
+    eleventyConfig.addPassthroughCopy("./src/contact");
+
     // Other required folders are passed through
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/_redirects");
