@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(''),url(/9f39f63af40a24e01442e32857704f64ba3be606/b76b7/fonts/yellowtail-v17-latin-regular.woff2) format('woff2'),url(/21642168a5368afeda9d1fc7a0eb68bdddacdfc7/a2d5b/fonts/yellowtail-v17-latin-regular.woff) format('woff')
+  src: local(''),url(/assets/fonts/yellowtail-v17-latin-regular.woff2) format('woff2')
 }
 
 @font-face {
