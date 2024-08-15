@@ -813,3 +813,41 @@ h1, h2, h2 span, h3, h4, h5, h6 {
 .normal-font{
   text-transform: none;
 }
+
+.image-flex{
+  display: flex;
+  gap: 5px;
+}
+
+.image-flex .h-12, .image-flex .w-12{
+  width: 2rem;
+  height:  2rem;
+  min-width: 2rem;
+  min-height:  2rem;
+}
+
+@media (max-width: 1310px){
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 710px){
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 410px){
+  .lg\:grid-cols-3 img{
+    display: none;
+  }
+  .lg\:grid-cols-3 .even-gear{
+    gap: unset;
+  }
+
+}
+
+#pricing{
+  margin-bottom: 20px;
+}
