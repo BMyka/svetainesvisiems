@@ -21,3 +21,23 @@ menuBtnBurger.addEventListener('click', toggleMenu);
 menuItem.forEach(function(menuItem) {
     menuItem.addEventListener('click', toggleMenu);
 });
+
+const emailInput = document.getElementById('emailInput');
+
+function updateActiveClass() {
+    const value = emailInput.value.trim();
+
+    if (value.length > 0) {
+        emailInput.classList.add('active');
+    } else {
+        emailInput.classList.remove('active');
+    }
+}
+
+emailInput.addEventListener('input', updateActiveClass);
+emailInput.addEventListener('change', updateActiveClass);
+emailInput.addEventListener('paste', updateActiveClass);
+emailInput.addEventListener('keyup', updateActiveClass);
+emailInput.addEventListener('cut', updateActiveClass);
+
+window.addEventListener('load', updateActiveClass);
