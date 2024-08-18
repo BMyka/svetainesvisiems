@@ -771,8 +771,13 @@
                                     </div>
 
                                     <div class="contact-form">
-                                        <form action="" id="contact-form" name="contact" method="POST" data-netlify="true" netlify onSubmit="submit">
+                                        <form action="" id="contact-form" name="contact" method="POST" data-netlify="true" netlify onSubmit="submit" netlify-honeypot="bot-field">
                                             <h2>Siųsti žinutę</h2>
+
+                                            <div class="hidden">
+                                                <input type="text" name="bot-field">
+                                            </div>
+
                                             <div class="input-box">
                                                 <input type="text" required="true" name="name">
                                                 <span>Vardas Pavardė</span>
