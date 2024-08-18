@@ -897,6 +897,16 @@ h1, h2, h2 span, h3, h4, h5, h6 {
 
 }
 
-.hidden{
+.hidden-form{
   display: none;
+}
+
+@media (max-width: 1025px){
+  .custom-pricing{
+    align-items: center;
+  }
+
+  .custom-pricing .pricing-item{
+    margin-bottom: 0;
+  }
 }

@@ -2,7 +2,7 @@ let menuBtn = document.querySelector('.menu-btn');
 let menuBtnBurger = document.querySelector('.menu-btn-burger');
 
 let menu = document.querySelector('.nav');
-let menuItem = document.querySelectorAll('.nav__link');
+let menuItems = document.querySelectorAll('.nav a'); // Select all anchor tags within the nav
 let body = document.body; // Select the body element
 
 // Function to toggle menu and body scroll
@@ -18,8 +18,11 @@ menuBtn.addEventListener('click', toggleMenu);
 menuBtnBurger.addEventListener('click', toggleMenu);
 
 // Event listeners for each menu item
-menuItem.forEach(function(menuItem) {
-    menuItem.addEventListener('click', toggleMenu);
+menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener('click', function() {
+        menu.classList.remove('active');  // Close the menu
+        body.classList.remove('no-scroll'); // Re-enable scrolling
+    });
 });
 
 const emailInput = document.getElementById('emailInput');
