@@ -910,3 +910,11 @@ h1, h2, h2 span, h3, h4, h5, h6 {
     margin-bottom: 0;
   }
 }
+
+.contact-info-content a, .contact-info-content p{
+  text-align: left;
+}
+
+.contact-info-content a:hover, .contact-info-content p:hover {
+  color: var(--primary);
+}
