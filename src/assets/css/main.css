@@ -78,9 +78,14 @@ header {
 }
 
 
-.open-btn{
-  position: absolute;
+.open-btn {
+  position: fixed;
   right: 20px;
+  z-index: 100;
+}
+
+.header__nav{
+  z-index: 101;
 }
 
 @media (min-width: 768px){
@@ -366,7 +371,7 @@ h1, h2, h2 span, h3, h4, h5, h6 {
 #who-we-are {
   position: relative;
   margin-bottom: 100px;
-  z-index: 900000
+  z-index: 99;
 }
 
 .who-topper h2 {
@@ -917,4 +922,16 @@ h1, h2, h2 span, h3, h4, h5, h6 {
 
 .contact-info-content a:hover, .contact-info-content p:hover {
   color: var(--primary);
+}
+
+.padding-80{
+  padding-top: 80px;
+}
+
+#kainos{
+  padding-top: 0
+}
+
+.center-it{
+  text-align: center !important;
 }
