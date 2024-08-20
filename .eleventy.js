@@ -60,10 +60,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("postDate", filterPostDate);
     // END FILTERS
 
-    eleventyConfig.addPlugin(purgeCssPlugin, {
-        config: "./purgecss.config.js", // Optional: specify the location of your PurgeCSS config
-        quiet: false, // Optional: Set to true to suppress terminal output
-    });
+    // eleventyConfig.addPlugin(purgeCssPlugin, {
+    //     config: "./purgecss.config.js", // Optional: specify the location of your PurgeCSS config
+    //     quiet: false, // Optional: Set to true to suppress terminal output
+    // });
 
     return {
         dir: {

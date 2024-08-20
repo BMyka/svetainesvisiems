@@ -8,6 +8,10 @@
   --primary: #43b7ff;
 }
 
+body{
+  font-family: 'Poppins', 'sans-serif';
+}
+
 header {
   display: flex;
   justify-content: flex-end;
@@ -882,8 +886,91 @@ h1, h2, h2 span, h3, h4, h5, h6 {
   padding-top: 10px;
 }
 
-.arrow-right{
-  display: none;
+@media(min-width: 870px) and (max-width: 1320px){
+  .mt-16.grid.gap-6 li{
+    height: 258px;
+    width: 358px;
+  }
+}
+
+@media(min-width: 710px) and (max-width: 870px){
+  .mt-16.grid.gap-6 li{
+    height: 330px;
+    width: 263px;
+  }
+}
+
+
+@media (min-width: 710px) and (max-width: 1320px){
+  .arrow-right {
+    display: block;
+    position: absolute;
+    max-width: 110px;
+    top: -112px;
+    right: -82px;
+    transform: rotate(36deg);
+  }
+
+  .arrow-right.upsidedown {
+    display: block;
+    position: absolute;
+    max-width: 110px;
+    left: -96px;
+    bottom: -124px;
+    top: unset;
+    transform: rotate(-82deg) scaleX(-1);
+  }
+
+  .arrow-right.third-arrow {
+    display: block;
+    position: absolute;
+    max-width: 110px;
+    right: -81px;
+    top: 146px;
+    transform: rotate(141deg) scale(-1, 1);
+  }
+}
+
+@media (min-width: 710px) and (max-width: 870px){
+  .arrow-right {
+    display: block;
+    position: absolute;
+    max-width: 110px;
+    top: -112px;
+    right: -82px;
+    transform: rotate(36deg);
+  }
+
+  .arrow-right.upsidedown {
+    display: block;
+    position: absolute;
+    max-width: 110px;
+    left: -96px;
+    bottom: -124px;
+    top: unset;
+    transform: rotate(-82deg) scaleX(-1);
+  }
+
+  .arrow-right.third-arrow {
+    display: block;
+    position: absolute;
+    max-width: 110px;
+    right: -81px;
+    top: 146px;
+    transform: rotate(141deg) scale(-1, 1);
+  }
+}
+
+
+.custom-padding-header a span:hover{
+  color: var(--primary);
+}
+
+@media (max-width: 870px)
+{
+ .arrow-right{
+   display: none !important;
+ }
 }
 
 @media (min-width: 1320px){
@@ -902,11 +989,6 @@ h1, h2, h2 span, h3, h4, h5, h6 {
     top: 86px;
     transform: rotate(164deg) scaleX(-1);
   }
-
-  .step-number{
-    display: none
-  }
-
 }
 
 .hidden-form{
@@ -959,6 +1041,11 @@ h1, h2, h2 span, h3, h4, h5, h6 {
 
 .section-header p {
   color: #FFF;
+  font-size: 1.4em;
+}
+
+#__next .send-section{
+  padding-top: 2rem;
 }
 
 .row  {
@@ -1166,4 +1253,8 @@ textarea:focus{
 
 .flex.justify-center > section{
   width: 80%;
+}
+
+.left h2 .half-size{
+  color: black;
 }
