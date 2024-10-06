@@ -36,6 +36,32 @@
     <script src="/assets/js/navigation.js" defer></script>
     <noscript data-n-css=""></noscript>
 
+    <style>
+        .container-email {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            display: none;
+        }
+        h1 {
+            color: #FF5F33;
+        }
+        .button-email {
+            display: inline-block;
+            background-color: #FF5F33;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+
 </head>
 <body>
 <div id="__next">
@@ -754,6 +780,14 @@
                                     </div>
 
                                     <div class="contact-form">
+
+
+                                        <div class="container-email" id="success-message">
+                                            <h1>Ačiū!</h1>
+                                            <p>Jūsų žinutė sėkmingai išsiųsta.</p>
+                                            <p>Mes su jumis susisieksime per 2 d.d.</p>
+                                        </div>
+
                                         <form action="/success/" id="contact-form" name="contact" method="POST" data-netlify="true" netlify onSubmit="submit" netlify-honeypot="bot-field">
                                             <h2>Siųsti žinutę</h2>
 
@@ -788,6 +822,31 @@
                                             </div>
                                         </form>
                                     </div>
+
+                                    <script>
+                                        const form = document.querySelector("#contact-form");
+
+                                        form.addEventListener("submit", async function(event) {
+                                            event.preventDefault(); // Prevent default form submission
+
+                                            const formData = new FormData(form);
+                                            const successMessage = document.getElementById("success-message");
+
+                                            try {
+                                                await fetch("/", {
+                                                    method: "POST",
+                                                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                                                    body: new URLSearchParams(formData).toString()
+                                                });
+
+                                                // Hide form and show success message
+                                                form.style.display = "none";
+                                                successMessage.style.display = "block";
+                                            } catch (error) {
+                                                alert("Something went wrong. Please try again.");
+                                            }
+                                        });
+                                    </script>
 
                                 </div>
                             </div>
